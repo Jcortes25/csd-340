@@ -1,0 +1,56 @@
+/* Reset body margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container */
+#container {
+    text-align: center;
+}
+
+/* Styling for the main title */
+h1 {
+    color: rgba(34, 193, 195, 1); /* Change to your preferred color */
+    text-align: center;
+}
+
+/* Image Gallery styling */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10%;
+}
+
+/* Each gallery item */
+.gallery-item {
+    text-align: center;
+}
+
+/* Styling for the book titles */
+h3 {
+    color: rgba(255, 99, 71, 1); /* Change to your preferred color */
+}
+
+/* Centering the figure and image */
+figure {
+    text-align: center;
+}
+
+/* Styling for the figcaption */
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(60, 60, 60, 1); /* Change to your preferred color */
+}
+
+/* Styling for the back link */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+}
