@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        span {
+            font-weight: bold;
+            color: blue;
+        }
+        button {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <p>I was born and raised in <span id="word1">________</span>, <span id="word2">________</span>. My hometown is quiet with its child park close by and schools.</p>
+    
+    <p>I have decided to study <span id="word3">________</span> because for all of my life I’ve seen and read in discussions how coding is one of the most challenging yet exciting experiences—and you could one day acquire a cushy job at home.</p>
+    
+    <p>My hobbies include <span id="word4">________</span>, reading books and comics, and spending time with my family.</p>
+    
+    <p>This year I've been improving myself both physically and mentally—counting my calories, exercising more, and adding vitamins into my daily life.</p>
+
+    <button onclick="fillWord1()">Reveal Word 1</button><br>
+    <button onclick="fillWord2()">Reveal Word 2</button><br>
+    <button onclick="fillWord3()">Reveal Word 3</button><br>
+    <button onclick="fillWord4()">Reveal Word 4</button><br>
+
+    <script>
+        // JavaScript variables to fill the spans
+        const word1 = "Maryland";
+        const word2 = "Hyattsville";
+        const word3 = "coding";
+        const word4 = "playing video games";
+
+        function fillWord1() {
+            document.getElementById("word1").textContent = word1;
+        }
+
+        function fillWord2() {
+            document.getElementById("word2").textContent = word2;
+        }
+
+        function fillWord3() {
+            document.getElementById("word3").textContent = word3;
+        }
+
+        function fillWord4() {
+            document.getElementById("word4").textContent = word4;
+        }
+    </script>
+
+</body>
+</html>
