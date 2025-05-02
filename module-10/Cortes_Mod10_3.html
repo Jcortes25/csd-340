@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function changeImage(id, newSrc) {
+            document.getElementById(id).src = newSrc;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Assignment 10_3: JavaScript - Part 2</h1>
+    <p>Click the image to see it change!</p>
+
+    <img id="img1" src="images/image1.jpg" alt="Image 1" onclick="changeImage('img1', 'images/image1-alt.jpg')">
+    <img id="img2" src="images/image2.jpg" alt="Image 2" onclick="changeImage('img2', 'images/image2-alt.jpg')">
+
+</body>
+</html>
