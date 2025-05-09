@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #output { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <input type="text" id="userInput" placeholder="Enter item">
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteLastItem()">Delete Last Entry</button>
+    <button onclick="displayItems()">Display</button>
+
+    <div id="output"></div>
+
+    <script>
+        let items = [];
+
+        function addItem() {
+            const input = document.getElementById("userInput").value;
+            if (input.trim() !== "") {
+                items.push(input);
+                alert(`Added "${input}" at position ${items.length}`);
+                document.getElementById("userInput").value = "";
+            } else {
+                alert("Please enter a valid item.");
+            }
+        }
+
+        function deleteLastItem() {
+            if (items.length > 0) {
+                const removed = items.pop();
+                alert(`Removed "${removed}"`);
+            } else {
+                alert("No items to remove.");
+            }
+        }
+
+        function displayItems() {
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "<h2>List of Items:</h2>";
+            if (items.length === 0) {
+                outputDiv.innerHTML += "<p>No items in the list.</p>";
+            } else {
+                let list = "<ol>";
+                items.forEach((item) => {
+                    list += `<li>${item}</li>`;
+                });
+                list += "</ol>";
+                outputDiv.innerHTML += list;
+            }
+        }
+    </script>
+
+</body>
+</html>
