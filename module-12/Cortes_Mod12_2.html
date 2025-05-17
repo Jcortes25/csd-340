@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #bookList {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: decimal;
+      padding-left: 20px;
+    }
+
+    button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+  <button onclick="displayTopToBottom()">Top to Bottom</button>
+  <button onclick="displayBottomToTop()">Bottom to Top</button>
+
+  <div id="bookList">
+    <!-- Book list will appear here -->
+  </div>
+
+  <script>
+    const books = [
+      "To Kill a Mockingbird",
+      "1984",
+      "The Great Gatsby",
+      "Harry Potter",
+      "The Catcher in the Rye",
+      "The Hobbit",
+      "Fahrenheit 451",
+      "Moby Dick",
+      "War and Peace",
+      "The Hatchet"
+    ];
+
+    function displayTopToBottom() {
+      const sortedBooks = [...books].sort();
+      displayBooks(sortedBooks);
+    }
+
+    function displayBottomToTop() {
+      const sortedBooks = [...books].sort().reverse();
+      displayBooks(sortedBooks);
+    }
+
+    function displayBooks(bookArray) {
+      let output = "<ul>";
+      bookArray.forEach(book => {
+        output += `<li>${book}</li>`;
+      });
+      output += "</ul>";
+      document.getElementById("bookList").innerHTML = output;
+    }
+  </script>
+</body>
+</html>
